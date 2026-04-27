@@ -11,10 +11,14 @@ import {
   Line,
   ReferenceLine,
 } from "recharts";
-
 interface FitnessData {
-  profile: { name: string; avatar: string; memberSince: string };
-  today: { steps: number; sleep: number; heartRate: number | null; stepsGoal: number };
+  profile: { name: string; avatar?: string; memberSince?: string };
+  today: {
+    steps: number;
+    sleep: number;
+    heartRate: number | null;
+    stepsGoal: number;
+  };
   weekly: {
     avgSteps: number;
     steps: Array<{ date: string; value: number }>;
@@ -45,14 +49,26 @@ function StatCard({
         accent ? "bg-ink border-ink text-paper" : "border-subtle"
       }`}
     >
-      <p className={`font-mono text-xs tracking-widest uppercase mb-3 ${accent ? "text-accent" : "text-muted"}`}>
+      <p
+        className={`font-mono text-xs tracking-widest uppercase mb-3 ${
+          accent ? "text-accent" : "text-muted"
+        }`}
+      >
         {label}
       </p>
-      <p className={`font-display text-4xl font-800 ${accent ? "text-paper" : "text-ink"}`}>
+      <p
+        className={`font-display text-4xl font-800 ${
+          accent ? "text-paper" : "text-ink"
+        }`}
+      >
         {value}
       </p>
       {sub && (
-        <p className={`font-mono text-xs mt-2 ${accent ? "text-muted" : "text-muted"}`}>
+        <p
+          className={`font-mono text-xs mt-2 ${
+            accent ? "text-muted" : "text-muted"
+          }`}
+        >
           {sub}
         </p>
       )}
@@ -128,11 +144,7 @@ export function FitnessClient({ data }: { data: FitnessData | null }) {
             sub={`${Math.round(stepsProgress)}% of goal`}
             accent
           />
-          <StatCard
-            label="Sleep"
-            value={`${today.sleep}h`}
-            sub="last night"
-          />
+          <StatCard label="Sleep" value={`${today.sleep}h`} sub="last night" />
           <StatCard
             label="Resting HR"
             value={today.heartRate ? `${today.heartRate} bpm` : "—"}
@@ -208,7 +220,10 @@ export function FitnessClient({ data }: { data: FitnessData | null }) {
                 tick={{ fontFamily: "DM Mono", fontSize: 10, fill: "#8A8680" }}
               />
               <YAxis hide domain={[0, 10]} />
-              <Tooltip content={<CustomTooltip />} cursor={{ fill: "#E8E3DA" }} />
+              <Tooltip
+                content={<CustomTooltip />}
+                cursor={{ fill: "#E8E3DA" }}
+              />
               <ReferenceLine
                 y={8}
                 stroke="#E8572A"
@@ -258,9 +273,7 @@ export function FitnessClient({ data }: { data: FitnessData | null }) {
         <p className="font-mono text-xs text-muted">
           Synced from Fitbit · updates every hour
         </p>
-        <span className="font-mono text-xs text-accent">
-          ● Live
-        </span>
+        <span className="font-mono text-xs text-accent">● Live</span>
       </div>
     </div>
   );
