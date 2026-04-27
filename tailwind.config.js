@@ -7,16 +7,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ["var(--font-syne)", "sans-serif"],
-        body: ["var(--font-dm-sans)", "sans-serif"],
+        display: ["var(--font-fraunces)", "serif"],
+        body: ["var(--font-plus-jakarta)", "sans-serif"],
         mono: ["var(--font-dm-mono)", "monospace"],
       },
       colors: {
-        ink: "#0D0D0D",
-        paper: "#F5F0E8",
-        accent: "#E8572A",
-        muted: "#8A8680",
-        subtle: "#E8E3DA",
+        ink: "#3D1A00",
+        paper: "#FFF8F0",
+        accent: "#FF9F1C",
+        muted: "#CB4B00",
+        subtle: "#FFE0A3",
       },
       animation: {
         "fade-up": "fadeUp 0.6s ease forwards",
