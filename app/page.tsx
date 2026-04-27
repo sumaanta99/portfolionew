@@ -10,13 +10,13 @@ export default async function Home() {
   return (
     <div className="pt-14">
       {/* ── Hero ──────────────────────────────────────────────── */}
-      <section className="max-w-5xl mx-auto px-6 pt-20 pb-16">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-14 sm:pb-16">
         <div className="grid md:grid-cols-[1fr_auto] gap-12 items-end">
           <div>
             <p className="font-mono text-xs text-accent tracking-widest uppercase mb-4 animate-fade-up stagger-1">
               Available for opportunities
             </p>
-            <h1 className="font-display text-5xl md:text-7xl font-800 leading-none tracking-tight text-ink mb-6 animate-fade-up stagger-2">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-800 leading-none tracking-tight text-ink mb-6 animate-fade-up stagger-2">
               {personal.name.split(" ")[0]}
               <br />
               <span className="text-muted font-400">
@@ -26,7 +26,7 @@ export default async function Home() {
             <p className="font-body text-base text-muted max-w-xl leading-relaxed animate-fade-up stagger-3">
               {personal.summary}
             </p>
-            <div className="flex items-center gap-4 mt-8 animate-fade-up stagger-4">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mt-8 animate-fade-up stagger-4">
               <a
                 href="mailto:sumaantamunde@gmail.com"
                 className="bg-ink text-paper font-mono text-sm px-6 py-3 hover:bg-accent transition-colors"
@@ -59,7 +59,7 @@ export default async function Home() {
 
       {/* ── Stats ─────────────────────────────────────────────── */}
       <section className="border-y border-subtle bg-ink">
-        <div className="max-w-5xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {stats.map((s) => (
             <div key={s.label} className="text-center">
               <p className="font-display text-4xl font-800 text-paper">
@@ -72,8 +72,8 @@ export default async function Home() {
       </section>
 
       {/* ── Experience ────────────────────────────────────────── */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <div className="flex items-center justify-between mb-12">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div className="flex items-end justify-between gap-4 mb-10 sm:mb-12">
           <h2 className="font-display text-3xl font-700 text-ink">
             Experience
           </h2>
@@ -124,7 +124,7 @@ export default async function Home() {
 
       {/* ── Skills ────────────────────────────────────────────── */}
       <section className="bg-ink py-16">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <h2 className="font-display text-3xl font-700 text-paper mb-10">
             Skills
           </h2>
@@ -151,8 +151,8 @@ export default async function Home() {
       </section>
 
       {/* ── Blog preview ──────────────────────────────────────── */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <div className="flex items-center justify-between mb-12">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div className="flex items-end justify-between gap-4 mb-10 sm:mb-12">
           <h2 className="font-display text-3xl font-700 text-ink">
             From the blog
           </h2>
@@ -171,7 +171,7 @@ export default async function Home() {
             ))}
           </div>
         ) : (
-          <div className="border border-subtle p-10 text-center">
+          <div className="border border-subtle p-6 sm:p-10 text-center">
             <p className="font-mono text-sm text-muted">
               Blog posts will appear here once you publish on Medium.
             </p>

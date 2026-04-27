@@ -91,7 +91,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 export function FitnessClient({ data }: { data: FitnessData | null }) {
   if (!data) {
     return (
-      <div className="border border-subtle p-16 text-center">
+      <div className="border border-subtle p-8 sm:p-16 text-center">
         <p className="font-display text-2xl font-700 text-ink mb-3">
           Not connected yet
         </p>
@@ -137,7 +137,7 @@ export function FitnessClient({ data }: { data: FitnessData | null }) {
         <p className="font-mono text-xs text-muted tracking-widest uppercase mb-4">
           Today
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           <StatCard
             label="Steps"
             value={today.steps.toLocaleString()}
@@ -159,8 +159,8 @@ export function FitnessClient({ data }: { data: FitnessData | null }) {
       </div>
 
       {/* Steps progress bar */}
-      <div className="border border-subtle p-6">
-        <div className="flex items-center justify-between mb-3">
+      <div className="border border-subtle p-4 sm:p-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
           <p className="font-mono text-xs text-muted uppercase tracking-widest">
             Daily goal progress
           </p>
@@ -177,7 +177,7 @@ export function FitnessClient({ data }: { data: FitnessData | null }) {
       </div>
 
       {/* Steps chart */}
-      <div className="border border-subtle p-6">
+      <div className="border border-subtle p-4 sm:p-6">
         <p className="font-mono text-xs text-muted uppercase tracking-widest mb-6">
           Steps — Last 7 days
         </p>
@@ -207,7 +207,7 @@ export function FitnessClient({ data }: { data: FitnessData | null }) {
 
       {/* Sleep chart */}
       {sleepData.length > 0 && (
-        <div className="border border-subtle p-6">
+        <div className="border border-subtle p-4 sm:p-6">
           <p className="font-mono text-xs text-muted uppercase tracking-widest mb-6">
             Sleep — Last 7 days
           </p>
@@ -241,7 +241,7 @@ export function FitnessClient({ data }: { data: FitnessData | null }) {
 
       {/* Heart rate chart */}
       {hrData.length > 0 && (
-        <div className="border border-subtle p-6">
+        <div className="border border-subtle p-4 sm:p-6">
           <p className="font-mono text-xs text-muted uppercase tracking-widest mb-6">
             Resting Heart Rate — Last 7 days
           </p>
@@ -269,7 +269,7 @@ export function FitnessClient({ data }: { data: FitnessData | null }) {
       )}
 
       {/* Footer note */}
-      <div className="border-t border-subtle pt-6 flex items-center justify-between">
+      <div className="border-t border-subtle pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <p className="font-mono text-xs text-muted">
           Synced from Fitbit · updates every hour
         </p>

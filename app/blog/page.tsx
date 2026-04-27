@@ -13,14 +13,14 @@ export default async function BlogPage() {
 
   return (
     <div className="pt-14">
-      <div className="max-w-5xl mx-auto px-6 py-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
 
         {/* Header */}
         <div className="mb-16">
           <p className="font-mono text-xs text-accent tracking-widest uppercase mb-3">
             Blog
           </p>
-          <h1 className="font-display text-5xl md:text-6xl font-800 leading-none text-ink mb-4">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-800 leading-none text-ink mb-4">
             Writing
           </h1>
           <p className="font-body text-base text-muted max-w-xl">
@@ -46,7 +46,7 @@ export default async function BlogPage() {
                 href={posts[0].link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block border border-subtle p-8 hover:border-ink transition-colors group"
+                className="block border border-subtle p-5 sm:p-8 hover:border-ink transition-colors group"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span className="font-mono text-xs text-accent border border-accent/30 px-2 py-0.5">
@@ -61,17 +61,17 @@ export default async function BlogPage() {
                     </span>
                   ))}
                 </div>
-                <h2 className="font-display text-3xl font-700 text-ink mb-3 group-hover:text-accent transition-colors">
+                <h2 className="font-display text-2xl sm:text-3xl font-700 text-ink mb-3 group-hover:text-accent transition-colors">
                   {posts[0].title}
                 </h2>
                 <p className="font-body text-sm text-muted leading-relaxed mb-4 max-w-2xl">
                   {posts[0].description}
                 </p>
-                <div className="flex items-center gap-4 font-mono text-xs text-muted">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-4 font-mono text-xs text-muted">
                   <span>{posts[0].pubDate}</span>
                   <span>·</span>
                   <span>{posts[0].readTime}</span>
-                  <span className="ml-auto text-accent group-hover:translate-x-1 transition-transform">
+                  <span className="sm:ml-auto text-accent group-hover:translate-x-1 transition-transform">
                     Read →
                   </span>
                 </div>
@@ -88,7 +88,7 @@ export default async function BlogPage() {
             )}
           </>
         ) : (
-          <div className="border border-subtle p-16 text-center">
+          <div className="border border-subtle p-8 sm:p-16 text-center">
             <p className="font-display text-2xl font-700 text-ink mb-3">
               No posts yet
             </p>
@@ -108,7 +108,7 @@ export default async function BlogPage() {
 
         {/* Medium CTA */}
         {posts.length > 0 && (
-          <div className="mt-12 border-t border-subtle pt-8 flex items-center justify-between">
+          <div className="mt-12 border-t border-subtle pt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <p className="font-mono text-xs text-muted">
               Posts auto-sync from Medium every hour
             </p>

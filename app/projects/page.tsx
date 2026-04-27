@@ -27,12 +27,12 @@ export default async function ProjectsPage() {
 
   return (
     <div className="pt-14">
-      <div className="max-w-5xl mx-auto px-6 py-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
         <div className="mb-16">
           <p className="font-mono text-xs text-accent tracking-widest uppercase mb-3">
             Projects
           </p>
-          <h1 className="font-display text-5xl md:text-6xl font-800 leading-none text-ink mb-4">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-800 leading-none text-ink mb-4">
             Built in public
           </h1>
           <p className="font-body text-base text-muted max-w-xl">
@@ -56,14 +56,14 @@ export default async function ProjectsPage() {
             ))}
           </div>
         ) : (
-          <div className="border border-subtle p-16 text-center">
+          <div className="border border-subtle p-8 sm:p-16 text-center">
             <p className="font-mono text-sm text-muted">
               No public repos found.
             </p>
           </div>
         )}
 
-        <div className="mt-12 border-t border-subtle pt-6 flex items-center justify-between">
+        <div className="mt-12 border-t border-subtle pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <p className="font-mono text-xs text-muted">
             Excludes forks · updates every hour
           </p>

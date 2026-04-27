@@ -4,6 +4,11 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   title: "Sumaanta Munde — Senior Software Engineer",
   description:
     "Senior Software Engineer with 3.5+ years scaling high-impact products. Expert in server-driven systems, React Native, and frontend architecture.",

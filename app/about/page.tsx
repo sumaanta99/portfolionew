@@ -8,14 +8,14 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div className="pt-14">
-      <div className="max-w-5xl mx-auto px-6 py-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
 
         {/* Header */}
         <div className="mb-16">
           <p className="font-mono text-xs text-accent tracking-widest uppercase mb-3">
             About
           </p>
-          <h1 className="font-display text-5xl md:text-6xl font-800 leading-none text-ink mb-6">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-800 leading-none text-ink mb-6">
             {personal.name}
           </h1>
           <p className="font-body text-base text-muted max-w-2xl leading-relaxed">
@@ -43,7 +43,7 @@ export default function AboutPage() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20 border border-subtle p-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-6 mb-16 sm:mb-20 border border-subtle p-5 sm:p-8">
           {stats.map((s) => (
             <div key={s.label}>
               <p className="font-display text-4xl font-800 text-ink">{s.value}</p>
@@ -61,9 +61,9 @@ export default function AboutPage() {
             {experiences.map((exp) => (
               <div
                 key={exp.company}
-                className="border-t border-subtle py-10 grid md:grid-cols-[220px_1fr] gap-8"
+                className="border-t border-subtle py-8 sm:py-10 grid md:grid-cols-[220px_1fr] gap-6 sm:gap-8"
               >
-                <div className="sticky top-20 self-start">
+                <div className="md:sticky md:top-20 self-start">
                   <span className="inline-block font-mono text-xs text-accent border border-accent/30 px-2 py-0.5 mb-3">
                     {exp.type}
                   </span>
