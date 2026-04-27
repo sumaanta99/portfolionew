@@ -5,8 +5,9 @@ export const personal = {
   phone: "+91 9550614763",
   linkedin: "https://linkedin.com/in/sumaantamunde",
   college: "CSE - NITW'22",
-  summary:
-    "Senior Software Engineer with 3.5+ years of experience scaling high-impact products. Expert in architecting server-driven systems and unified component libraries that drive developer velocity and 40% user engagement. Proven track record in early-stage startups as well as mid-size enterprise firms of owning end-to-end delivery for platforms serving 14k+ daily users.",
+  summary: `Senior Software Engineer with 3.5+ years of experience scaling high-impact products. Expert in architecting server-driven systems and unified component libraries that drive developer velocity and 40% user engagement. Proven track record in early-stage startups as well as mid-size enterprise firms of owning end-to-end delivery for platforms serving 14k+ daily users.
+    \n \n Reach me at sumaantamunde@gmail.com / +91 95506 14763!
+    `,
 };
 
 export const experiences = [
